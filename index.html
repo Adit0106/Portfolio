@@ -4,7 +4,7 @@
 <head>
 	<title>Portfolio Site</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
 
 	<meta property="og:title" content="Page Tile" />
@@ -22,6 +22,54 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Your Page Title</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			background-color: rgba(0, 0, 0, 0.5); /* Adjust the background color and transparency */
+			backdrop-filter: blur(5px); /* Add backdrop filter with a blur effect (adjust the value as needed) */
+		}
+
+		.modal-content {
+			background-color: #fefefe;
+			margin: 15% auto;
+			padding: 20px;
+			border: 1px solid #888;
+			width: 85%;
+			max-width: 85%;
+			box-sizing: border-box;
+		}
+
+		.close {
+			color: #aaa;
+			float: right;
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.close:hover,
+		.close:focus {
+			color: black;
+			text-decoration: none;
+			cursor: pointer;
+		}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -78,37 +126,117 @@
 		<div class="glyphicon glyphicon-arrow-down"></div>
 	</section>
 
-	<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
-		<div class="container">
-			<div class="row d-flex no-gutters">
-				<div class="col-md-6 col-lg-6 flex">
-					<img src="images/profile.png" style="max-width: 100%;">
-				</div>
-				<div class="col-md-6 col-lg-6 pl-md-5 py-5">
-					<div class="row justify-content-start pb-3">
-						<div class="col-md-12 heading-section ftco-animate">
-							<h2 class="mb-4">About Me</h2>
-							<p> I am a graduate assistant at the Education Technology and Innovation Department at Boston University Metropolitan College, pursuing a master's degree in Applied Data Analytics. My core competencies include Data Analysis, Data visualization, and Machine Learning, which I have acquired through my education, certification, and internship experience.
-							</p>
-							<ul class="about-info mt-4 px-md-0 px-2">
-								<li class="d-flex"><span>Name:</span><span>Aditya Maheshwari</span></li>
-								<li class="d-flex"><span>Email:</span><span><a href="mailto:adityam@bu.edu">adityam@bu.edu</a></span></li>
-								<li class="d-flex"><span>Phone:</span><span><a href="tel:+18574259210">+1 857 425-9210</a></span></li>
-								<li class="d-flex"><span>City:</span><span>Boston, Massachusetts</span></li>
-								<li class="d-flex"><span>Country:</span> <span>United States</span></li>
-							</ul>
-						</div>
+		<section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
+			<div class="container">
+				<div class="row d-flex no-gutters">
+					<div class="col-md-6 col-lg-6 flex">
+						<img src="images/profile.jpeg" style="max-width: 100%;">
 					</div>
-					<div class="counter-wrap ftco-animate d-flex mt-md-3">
-						<div class="text">
-							<p><a href="https://drive.google.com/file/d/1unlYt2qZpGYL_eohNIOJ3RR1vgzkjZnl/view?usp=drive_link" class="btn btn-primary py-3 px-3" target='_blank'>View Resume</a></p>
+					<div class="col-md-6 col-lg-6 pl-md-5 py-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								<h2 class="mb-4">About Me</h2>
+								<p>
+									Hey there!
+									<br><br>
+									I'm Aditya Maheshwari, a practical data enthusiast seeking to make an impact (yeah, did the whole degree thing and got some cool projects to flex). 
+									<br><br>
+									But you know what? Life's not just about the serious stuff — it's also the little things. Taking cues from Roger Federer, I'm all in for embracing the little joys of smashing it on the racquet sports scene. And hey, I've strummed my way into being a self-taught guitarist as well!
+									<br><br>
+									Curious about my academic ride? Let's spill the beans!
+								</p>
+								<div class="dropdown">
+									<button class="btn btn-primary dropdown-toggle" type="button" id="aboutDropdown"
+										data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+										My Journey
+									</button>
+									<div class="dropdown-menu" aria-labelledby="aboutDropdown">
+										<!-- Content for My Journey -->
+									</div>
+								</div>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Name:</span><span>Aditya Maheshwari</span></li>
+									<li class="d-flex"><span>Email:</span><span><a
+												href="mailto:adityam@bu.edu" style="color: #008080; text-decoration: underline;">adityam@bu.edu</a></span></li>
+									<li class="d-flex"><span>Phone:</span><span><a
+												href="tel:+18574259210" style="color: #008080; text-decoration: underline;">+1 857 425-9210</a></span></li>
+									<li class="d-flex"><span>City:</span><span>Boston, Massachusetts</span></li>
+									<li class="d-flex"><span>Country:</span> <span>United States</span></li>
+								</ul>
+								<div class="counter-wrap ftco-animate d-flex mt-md-3">
+									<div class="text">
+										<p><a href="https://drive.google.com/file/d/1frdlLLD0fBL2OlhSJioM2kq1tn5-hktQ/view?usp=sharing"
+												class="btn btn-primary py-3 px-3" target='_blank'>View
+												Resume</a></p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+		</section>
+	
+		<!-- Modal for My Journey -->
+		<div id="myJourneyModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<!-- Content goes here -->
+				<div class="modal-body">
+					<!-- Your paragraphs about your journey -->
+					<p> My winding path to data science began during my B.Tech in Electronics and Telecommunications at Narsee
+						Monjee Institute of Management Studies. Though setting out to become an engineer, a data science
+						course sparked my curiosity. I was drawn to the fusion of analytics, programming, and strategic
+						thinking.</p>
+	
+					<p> Despite my electronics background, I found myself building a Machine Learning based URL Classification
+						System, foreshadowing my growing interest in data. I went on to pursue a Masters in Applied Data
+						Analytics at Boston University, fully immersing myself in this new world.</p>
+	
+					<p> As a graduate research assistant, my teammates and I developed a Data Visualization pipeline
+						analyzing Mutual Fund data. We uncovered insights that higher AUM and lower turnover funds
+						outperformed counterparts. This project illuminated the power of data to reveal actionable
+						patterns.</p>
+	
+					<p> Apart from my love for Data Science, you might find me delving into the world of Finance and Investing
+						or even just playing Lawn Tennis and my Guitar. These pursuits, though seeming diverse, share the
+						same essence of challenge and excitement, much like navigating the vast terrains of data. For me,
+						data reveals more than numbers - it uncovers potential, vision, and game-changing ideas.</p>
+	
+					<p>If you seek someone who can extract insights from data's intricate details, I'm eager to connect.
+						Let's have a conversation about how to transform your data into tangible success stories. Feel free
+						to drop me a line at adityam@bu.edu.
+					</p>
+				</div>
+			</div>
 		</div>
-	</section>
-
+	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<script>
+			// JavaScript
+			document.addEventListener('DOMContentLoaded', function () {
+				var modal = document.getElementById('myJourneyModal');
+				var btn = document.getElementById('aboutDropdown');
+				var span = document.getElementsByClassName('close')[0];
+	
+				btn.onclick = function () {
+					modal.style.display = 'block';
+				}
+	
+				span.onclick = function () {
+					modal.style.display = 'none';
+				}
+	
+				window.onclick = function (event) {
+					if (event.target === modal) {
+						modal.style.display = 'none';
+					}
+				}
+			});
+		</script>
+	
 	<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
 		<div class="container">
 			<div class="row">
@@ -132,7 +260,7 @@
 							<div class="text pl-3">
 								<h2>Boston University</h2>
 								<span class="position">Master of Science</span>
-								<p><strong><a href="https://www.bu.edu/met/degrees-certificates/ms-applied-data-analytics/" target="_blank"><u>Applied Data Analytics</u></a></strong></p>
+								<p><strong><a href="https://www.bu.edu/met/degrees-certificates/ms-applied-data-analytics/" target="_blank" style="color: #008080; text-decoration: none;"><u>Applied Data Analytics</u></a></strong></p>
 								<span class="date">September 2022 - Present</span>
 								<p>Relevant Coursework: </p>
 								<ul>
@@ -142,6 +270,8 @@
 					              <li>Data Mining</li>
 					              <li>Web Mining and Graph Analytics</li>
 					              <li>Foundations of Analytics and Data Visualization</li>
+					              <li>Computational Mathematics for Machine Learning</li>
+					              <li>Analysis of Algorithms</li>
 					            </ul>
 								
 							</div>
@@ -153,7 +283,7 @@
 							<div class="text pl-3">
 								<h2>NMIMS University</h2>
 								<span class="position">Bachelor of Technolgy</span>
-								<p><strong><a href="https://engineering.nmims.edu/" target="_blank"><u>Electronics and Telecommunication</u></a></strong></p>
+								<p><strong><a href="https://engineering.nmims.edu/" target="_blank" style="color: #008080; text-decoration: none;"><u>Electronics and Telecommunication</u></a></strong></p>
 								<span class="date">May 2022</span>
 								<p>Relevant Coursework: </p>
 								<ul>
@@ -177,7 +307,7 @@
 							<div class="text pl-3">
 								<h2>Graduate Assistant - Education Technology and Innovation</h2>
 								<span class="position">Boston University - Metropolitan College</span>
-								<p class="date">Jan 2023 - Present</p>
+								<p class="date">Jan 2023 - Dec 2023</p>
 								<ul>
 					              <li>Enhanced University's Blackboard LMS by integrating LTI tools like Zoom and InScribe, reducing faculty workload by up to 2 hours weekly and maintaining a 100% resolution rate through ServiceNow support</li>
 					              <li>Conducted research on generative AI for plagiarism detection and GPT technology for faculty support, elevating technology utilization</li>
@@ -191,7 +321,7 @@
 							<div class="text pl-3">
 								<h2>Graduate Research Assistant</h2>
 								<span class="position">Boston University - Metropolitan College</span>
-								<p class="date">May 2023 - July 2023</p>
+								<p class="date">May 2023 - Sep 2023</p>
 								<ul>
 									<li>Developed an efficient data visualization pipeline for a 25-year dataset comprising 150 large-cap mutual funds sourced from WRDS and Yahoo Finance. Evaluated fund performance relative to the S&P-500 benchmark through K-means ++ Clustering on CuSum data.</li>
 									<li>Examined trends in historical data to infer that Mutual Funds with AUM exceeding $10 billion and a low Turnover Ratio of approximately 0.2 outperformed the Index fund.</li>
@@ -205,15 +335,15 @@
 						<div class="row mb-4 ftco-animate">
 							<div class="col grow"><img class="img-fluid" src="images/skills/python.png" title="Python"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/r.png" title="R Programming"></div>
-							<div class="col grow"><img class="img-fluid" src="images/skills/SQL.png" title="SQL"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/sql.png" title="SQL"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/apache-spark.png" title="Spark"></div>
 						</div>
 
 						<div class="row mb-4 ftco-animate">
-							<div class="col grow"><img class="img-fluid" src="images/skills/airflow.png"	title="Airflow"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/Tableau.png" title="Tableau"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/PowerBI.png" title="PowerBI"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/aws.png" title="AWS"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/gcp.png" title="Google Cloud Platform"></div>
-							<div class="col grow"><img class="img-fluid" src="images/skills/git.png" title="GitHub"></div>
 						</div>
 
 						<div class="row mb-4 ftco-animate">
@@ -227,6 +357,7 @@
 							<div class="col grow"><img class="img-fluid" src="images/skills/numpy.png" title="Numpy"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/pandas.png" title="Pandas"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/sympy.png" title="SymPy"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/NLTK.png" title="NLTK"></div>
 						</div>
 
 						<div class="row mb-4 ftco-animate">
@@ -237,8 +368,17 @@
 						</div>
 
 						<div class="row mb-4 ftco-animate">
+							<div class="col grow"><img class="img-fluid" src="images/skills/airflow.png"	title="Airflow"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/git.png" title="GitHub"></div>
 							<div class="col grow"><img class="img-fluid" src="images/skills/jira.png" title="Jira"></div>								
 							<div class="col grow"><img class="img-fluid" src="images/skills/ms-office.png" title="MS Office"></div>
+						</div>
+
+						<div class="row mb-4 ftco-animate">
+							<div class="col grow"><img class="img-fluid" src="images/skills/kubernetes.png" title="Kubernetes"></div>								
+							<div class="col grow"><img class="img-fluid" src="images/skills/docker.png" title="Docker"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/snowflake.png" title="Snowflake"></div>
+							<div class="col grow"><img class="img-fluid" src="images/skills/langchain.png" title="LangChain"></div>
 						</div>
 
 
@@ -250,7 +390,7 @@
 								<img src="images/deeplearningai.png" width="100px" height="100px">
 							</div>
 							<div class="text pl-3">
-								<h2><a href="https://coursera.org/share/45f0e5d92af01c72e3f39d06503b284b" target="_blank"><u>Deep Learning Specialization</u></a></h2>
+								<h2><a href="https://coursera.org/share/45f0e5d92af01c72e3f39d06503b284b" target="_blank" style="color: #008080; text-decoration: none;"><u>Deep Learning Specialization</u></a></h2>
 								<span><strong>Coursera</strong></span>
 								<p class="date">2020</p>
 							</div>
@@ -260,7 +400,7 @@
 								<img src="images/ibm.png" width="100px" height="100px">
 							</div>
 							<div class="text pl-3">
-								<h2><a href="https://coursera.org/share/16337e36bebb7d05593a02f14c4c8063" target="_blank"><u>IBM Data Science Professional Certificate</u></a></h2>
+								<h2><a href="https://coursera.org/share/16337e36bebb7d05593a02f14c4c8063" target="_blank" style="color: #008080; text-decoration: none;"><u>IBM Data Science Professional Certificate</u></a></h2>
 								<span><strong>Coursera</strong></span>
 								<p class="date">2020</p>
 							</div>
@@ -270,7 +410,7 @@
 								<img src="images/greyatom.png" width="100px" height="100px">
 							</div>
 							<div class="text pl-3">
-								<h2><a href="https://drive.google.com/file/d/1i2X7wv9Dbq2rT39aIL8aUcP3bw3iAMD4/view?usp=sharing" target="_blank"><u>Data Science Master's Program Certificate</u></a></h2>
+								<h2><a href="https://drive.google.com/file/d/1i2X7wv9Dbq2rT39aIL8aUcP3bw3iAMD4/view?usp=sharing" target="_blank" style="color: #008080; text-decoration: none;"><u>Data Science Master's Program Certificate</u></a></h2>
 								<span><strong>Greyatom School of Data Science</strong></span>
 								<p class="date">2020</p>
 							</div>
@@ -280,7 +420,7 @@
 								<img src="images/greyatom.png" width="100px" height="100px">
 							</div>
 							<div class="text pl-3">
-								<h2><a href="https://drive.google.com/file/d/1XVZ2kfMqNUc4d7Lkscst-EqdTrYyRWQC/view?usp=sharing" target="_blank"><u>Natural Language Processing with Deep Learning</u></a></h2>
+								<h2><a href="https://drive.google.com/file/d/1XVZ2kfMqNUc4d7Lkscst-EqdTrYyRWQC/view?usp=sharing" target="_blank" style="color: #008080; text-decoration: none;"><u>Natural Language Processing with Deep Learning</u></a></h2>
 								<span><strong>Greyatom School of Data Science</strong></span>
 								<p class="date">2020</p>
 							</div>
@@ -290,7 +430,7 @@
 								<img src="images/greyatom.png" width="100px" height="100px">
 							</div>
 							<div class="text pl-3">
-								<h2><a href="https://drive.google.com/file/d/1rpiCnwwl6UuLaf-hWFbbNxwbz-6VCc63/view?usp=sharing" target="_blank"><u>Computer Vision Techniques with Deep Learning</u></a></h2>
+								<h2><a href="https://drive.google.com/file/d/1rpiCnwwl6UuLaf-hWFbbNxwbz-6VCc63/view?usp=sharing" target="_blank" style="color: #008080; text-decoration: none;"><u>Computer Vision Techniques with Deep Learning</u></a></h2>
 								<span><strong>Greyatom School of Data Science</strong></span>
 								<p class="date">2020</p>
 							</div>
@@ -310,7 +450,25 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a class="services-1 shadow" href="https://github.com/Adit0106/Categorization-of-Property-Type" target="_blank">
+					<a class="services-1 shadow" href="https://github.com/Adit0106/LAPD-Crime-Big-Data-Analysis" target="_blank" style="color: #008080; text-decoration: none;">
+						<span class="icon">
+							<i class="fa-solid fa-gun"></i>
+						</span>
+						<div class="desc">
+							<h3 class="mb-4">LAPD Crime Big Data Analysis</h3>
+							<p><strong>Python • Tableau • PostgreSQL • Google Cloud Platform </strong></p>
+								<ul>
+									<li>Orchestrated the integration of LA crime dataset with PostgreSQL and Tableau, facilitating dynamic and tailored visualizations for key business questions, including demographic-based insights and location-based hotspot identification.
+									</li>
+									<li>Spearheaded end-to-end development of data pipeline on Google Cloud Platform by applying RandomForest Classifier and Regressor with PCA to predict Victim Age, Sex, and Descent.
+									</li>
+								</ul>
+							</p>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4 text-center d-flex ftco-animate">
+					<a class="services-1 shadow" href="https://github.com/Adit0106/Categorization-of-Property-Type" target="_blank" style="color: #008080; text-decoration: none;">
 						<span class="icon">
 							<i class="fa-solid fa-house"></i>
 						</span>
@@ -328,7 +486,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a class="services-1 shadow" href="https://github.com/Adit0106/Insurance-Premium-Analysis" target="_blank">
+					<a class="services-1 shadow" href="https://github.com/Adit0106/Insurance-Premium-Analysis" target="_blank" style="color: #008080; text-decoration: none;">
 						<span class="icon">
 							<i class="fa-solid fa-file-invoice"></i>
 						</span>
@@ -346,8 +504,10 @@
 							</p>
 						</div>
 					</a>
-				</div><div class="col-md-4 text-center d-flex ftco-animate">
-					<a class="services-1 shadow" href="https://github.com/Adit0106/URL-Classification-System" target="_blank">
+				</div>
+				<div class="row">
+				<div class="col-md-4 text-center d-flex ftco-animate">
+					<a class="services-1 shadow" href="https://github.com/Adit0106/URL-Classification-System" target="_blank" style="color: #008080; text-decoration: none;">
 						<span class="icon">
 							<i class="fa-solid fa-link-slash"></i>
 						</span>
@@ -366,11 +526,8 @@
 						</div>
 					</a>
 				</div>
-			</div>
-
-			<div class="row">
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a class="services-1 shadow" href="https://github.com/Adit0106/Greyatom_Capstone_project-MFCS" target="_blank">
+					<a class="services-1 shadow" href="https://github.com/Adit0106/Greyatom_Capstone_project-MFCS" target="_blank" style="color: #008080; text-decoration: none;">
 						<span class="icon">
 							<i class="fa-solid fa-car-side"></i>
 						</span>
@@ -388,7 +545,7 @@
 					</a>
 				</div>
 				<div class="col-md-4 text-center d-flex ftco-animate">
-					<a class="services-1 shadow" href="https://github.com/Adit0106/Face-Mask-Detection-System" target="_blank">
+					<a class="services-1 shadow" href="https://github.com/Adit0106/Face-Mask-Detection-System" target="_blank" style="color: #008080; text-decoration: none;">
 						<span class="icon">
 							<i class="fa-solid fa-mask-face"></i>
 						</span>
@@ -411,23 +568,6 @@
 		</div>
 		</div>
 	</section>
-
-
-
-	<!-- <section class="ftco-section ftco-hireme img" style="background-image: url(images/bg_1.jpg)">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>I'm <span>Available</span> for Hire</h2>
-					<p class="mt-3 mb-0">
-						<a id="fiverr" href="https://fiverr.com/ahsankhan26" target="_blank"
-							class="btn btn-primary py-3 px-5">Fiverr</a>
-					</p>
-				</div>
-			</div>
-		</div>
-	</section> -->
 
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
