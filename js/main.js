@@ -40,27 +40,28 @@
 	// Scrollax
    $.Scrollax();
 
+// Burger Menu
+var burgerMenu = function () {
 
+    $('body').on('click', '.js-fh5co-nav-toggle', function (event) {
 
-   // Burger Menu
-	var burgerMenu = function() {
+        event.preventDefault();
 
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
+        if ($('#ftco-nav').is(':visible')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    });
 
-			event.preventDefault();
+    // Close menu when an option is selected
+    $('#ftco-nav').on('click', 'a', function () {
+        $('.js-fh5co-nav-toggle').trigger('click');
+    });
+};
 
-			if ( $('#ftco-nav').is(':visible') ) {
-				$(this).removeClass('active');
-			} else {
-				$(this).addClass('active');	
-			}
+burgerMenu();
 
-			
-			
-		});
-
-	};
-	burgerMenu();
 
 
 	var onePageClick = function() {
@@ -439,4 +440,3 @@ $(function() {
   }
 
 });
-
